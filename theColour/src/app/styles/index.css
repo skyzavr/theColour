@@ -1,0 +1,5 @@
+@import './normalize.css';
+@import './colours.css';
+body {
+  background-color: var(--bgr);
+}
