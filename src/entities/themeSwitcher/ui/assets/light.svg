@@ -1,0 +1,11 @@
+<svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect x="9.91309" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(90 9.91309 0)" fill="#F5F5F5"/>
+<rect x="9.91309" y="16.2866" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(90 9.91309 16.2866)" fill="#F5F5F5"/>
+<rect x="19.1191" y="9.91357" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(-180 19.1191 9.91357)" fill="#F5F5F5"/>
+<rect x="2.83203" y="9.91357" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(-180 2.83203 9.91357)" fill="#F5F5F5"/>
+<rect x="16.5693" y="3.05029" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(135 16.5693 3.05029)" fill="#F5F5F5"/>
+<rect x="5.05273" y="14.5667" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(135 5.05273 14.5667)" fill="#F5F5F5"/>
+<rect x="16.0684" y="16.5696" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(-135 16.0684 16.5696)" fill="#F5F5F5"/>
+<rect x="4.55273" y="5.05322" width="2.83245" height="0.708113" rx="0.354056" transform="rotate(-135 4.55273 5.05322)" fill="#F5F5F5"/>
+<circle cx="9.55976" cy="9.55952" r="4.10273" stroke="#F5F5F5"/>
+</svg>

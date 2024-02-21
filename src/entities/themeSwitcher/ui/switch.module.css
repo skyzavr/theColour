@@ -1,0 +1,13 @@
+.theme:hover {
+  cursor: pointer;
+  background: rgba(55, 135, 255, 0.97);
+  transition: background 0.4s;
+  border-radius: 50%;
+}
+.theme {
+  background: none;
+  border: 0px;
+  padding: 6px;
+  border-radius: 50%;
+  transition: background 0.4s;
+}
