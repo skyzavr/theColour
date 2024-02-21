@@ -12,6 +12,7 @@ export default defineConfig({
       '@pages': path.resolve(__dirname, 'src/pages'),
       '@widgets': path.resolve(__dirname, 'src/widgets'),
       '@shared': path.resolve(__dirname, 'src/shared'),
+      '@entities': path.resolve(__dirname, 'src/entities'),
     },
   },
 });
