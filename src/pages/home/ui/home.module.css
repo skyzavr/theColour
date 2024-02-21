@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+@media (min-width: 640px) {
+  .wrapper {
+    margin-top: 0;
+    justify-content: center;
+    top: calc((100% - 360px) / 2);
+    left: 0;
+    right: 0;
+    position: absolute;
+    align-items: center;
+  }
+}

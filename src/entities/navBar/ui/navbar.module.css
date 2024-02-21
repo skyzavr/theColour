@@ -1,0 +1,19 @@
+.navEl a {
+  margin-right: 20px;
+  text-decoration: none;
+  font-size: 18px;
+  font-family: 'Outfit', sans-serif;
+  color: var(--text);
+  transition: color 0.4s ease-in-out;
+  font-weight: 300;
+}
+.current {
+  font-weight: 600 !important;
+}
+.navEl:hover a {
+  color: var(--addColour--2);
+  transition: color 0.4s ease-in-out;
+}
+.navEl {
+  list-style: none;
+}

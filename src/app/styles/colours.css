@@ -10,6 +10,7 @@
   --text: #ffffff;
   --addColour: #0c0c0c;
   --addColour--2: #3787ff;
+  --bgr-op: rgba(19, 19, 19, 0.7);
 }
 :root[color-scheme='light'] {
   --bgr: #fff;
@@ -22,5 +23,6 @@
   --green: #5dfd80;
   --text: #212121;
   --addColour: #f5f5f5;
-  --addColour--2: #3787ff;
+  --addColour--2: #004dc0;
+  --bgr-op: rgba(255, 255, 255, 0.5);
 }
