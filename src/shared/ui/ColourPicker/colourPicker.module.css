@@ -1,0 +1,14 @@
+.inputColourPicker {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  height: 26px;
+  width: 26px;
+  border-radius: 2px;
+  margin-right: 5px;
+}
+.inputColourPicker::-webkit-color-swatch,
+.inputColourPicker::-webkit-color-swatch-wrapper {
+  border: none;
+  border-radius: 2px;
+}

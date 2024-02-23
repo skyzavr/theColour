@@ -1,0 +1,84 @@
+.wrapper {
+  background-color: var(--addColour);
+  margin: 20px;
+  border-radius: 10px;
+  padding: 20px;
+  margin-top: 40px;
+  max-width: 1400px;
+  display: flex;
+}
+/* Left side */
+.contrastInfo {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.title {
+  font-size: 24px;
+  color: var(--text);
+  margin-bottom: 30px;
+  text-align: left;
+}
+.info {
+  max-width: 520px;
+}
+.info p {
+  color: var(--text);
+  margin-bottom: 30px;
+  text-align: left;
+  line-height: 1.38;
+  font-size: 16px;
+}
+/* right side */
+.contrast {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.colourInputField {
+  display: flex;
+  width: 100%;
+}
+
+/* responsive */
+@media (min-width: 300px) {
+  .wrapper {
+    margin: 20px;
+    flex-direction: column;
+  }
+  .colourInputField {
+    flex-direction: column;
+  }
+  .contrast {
+    margin-top: 20px;
+  }
+}
+@media (min-width: 475px) {
+  .colourInputField {
+    flex-direction: row;
+  }
+  .colourInputField > :first-child {
+    margin-right: 20px;
+  }
+}
+@media (min-width: 580px) {
+  .contrast,
+  .contrastInfo {
+    margin: 10px auto;
+  }
+}
+@media (min-width: 1440px) {
+  .contrastInfo {
+    width: 50%;
+  }
+}
+@media (min-width: 1190px) {
+  .wrapper {
+    flex-direction: row;
+  }
+}
+@media (min-width: 1440px) {
+  .wrapper {
+    margin: 20px auto;
+  }
+}
