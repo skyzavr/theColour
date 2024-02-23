@@ -1,0 +1,25 @@
+.wrapper {
+  max-width: 520px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.inputColourArea {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-bottom: 10px;
+  background: var(--text);
+
+  justify-content: space-between;
+  border-radius: 2px;
+}
+.errorMsg {
+  color: var(--red);
+  line-height: 1.33;
+  height: 20px;
+}
+@media (min-width: 600px) {
+  .wrapper {
+    max-width: 250px;
+  }
+}
