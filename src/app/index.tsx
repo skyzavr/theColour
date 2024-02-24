@@ -6,6 +6,7 @@ import { Home } from '@pages/home';
 import { Layout } from '@widgets/layout';
 import { NotFound } from '@pages/notFound';
 import { Contrast } from '@pages/contrastChecker';
+import { Palette } from '@pages/paletteGenerator';
 
 const App = () => {
   const initTheme = localStorage.getItem('theme') || 'dark';
@@ -15,6 +16,7 @@ const App = () => {
       children: [
         { path: '/', element: <Home /> },
         { path: '/contrast', element: <Contrast /> },
+        { path: '/generator', element: <Palette /> },
         {
           path: '*',
           element: <NotFound />,
