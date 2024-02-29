@@ -3,7 +3,7 @@ import contrast from '@pages/home/ui/assets/contrastChecker.svg';
 import palette from '@pages/home/ui/assets/imgPallete.svg';
 import generator from '@pages/home/ui/assets/paletteGen.svg';
 
-export type Card = { id: number; path: string; title: string; comp: string };
+import { Card } from '@shared/types/Card';
 
 export const cards: Card[] = [
   { id: 1, path: '/generator', title: 'Palette Generator', comp: generator },

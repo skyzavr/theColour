@@ -1,0 +1,36 @@
+.colourParams {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-top: 30px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 100%;
+  justify-content: space-between;
+}
+.colourName {
+  font-size: 18px;
+  color: var(--text);
+}
+.colourBtns {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btnItem {
+  margin-left: 8px;
+  margin-right: 8px;
+  color: var(--text);
+}
+.btnItem * {
+  fill: var(--text);
+}
+.btnItem:hover * {
+  cursor: pointer;
+  fill: var(--addColour--2);
+}
+
+.locked * {
+  fill: var(--text);
+  opacity: 0.5;
+}
