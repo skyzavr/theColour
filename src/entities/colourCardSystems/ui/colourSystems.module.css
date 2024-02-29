@@ -1,0 +1,15 @@
+.colourSet {
+  width: 100%;
+  padding: 10px;
+}
+.ColourSetItem {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.ColourSetItem * {
+  color: var(--text);
+  font-size: 18px;
+}
