@@ -1,0 +1,17 @@
+.mainWrapper {
+  max-width: 1480px;
+}
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, max-content));
+  gap: 20px;
+  width: 100%;
+  justify-content: center;
+}
+
+/*  */
+.newBtn {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
