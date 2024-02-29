@@ -5,7 +5,7 @@ import classes from './button.module.css';
 type props = {
   text: string;
   onClickFunc: () => void;
-  type: string;
+  type?: string;
   children?: ReactElement;
 };
 
