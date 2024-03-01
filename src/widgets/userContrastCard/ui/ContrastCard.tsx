@@ -1,6 +1,12 @@
+import ToolTip from '@shared/ui/ToolTip/ToolTip';
+
 import classes from './contrastCard.module.css';
+
 type props = { colour: string; bgr: string; text: string; hint: string };
+
 export const ContrastCard = ({ colour, bgr, text, hint }: props) => {
+  const tooltipParams = { hint, style: { color: colour } };
+
   return (
     <div className={classes.card} style={{ backgroundColor: `${bgr}` }}>
       <div className={classes.title} style={{ color: `${colour}` }}>
@@ -10,12 +16,7 @@ export const ContrastCard = ({ colour, bgr, text, hint }: props) => {
         {text}
       </div>
       <div className={classes.sign}>
-        <span className={classes.tooltip}>
-          <span className={classes.tooltipHint}>{hint}</span>
-          <span className={classes.tooltipText} style={{ color: `${colour}` }}>
-            Tim Bradford
-          </span>
-        </span>
+        <ToolTip {...tooltipParams}>Tim Bradford</ToolTip>
       </div>
     </div>
   );
