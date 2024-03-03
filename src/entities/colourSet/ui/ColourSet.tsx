@@ -15,9 +15,8 @@ export const ColourSet = ({ param, colour, onUpdateParam }: props) => {
   const linkParams = {
     target: '_blank',
     to: '/ColourInfo',
-    state: { from: colour },
+    onClick: () => localStorage.setItem('colourInfo', colour),
   };
-
   const btnHandler = (data: string) => {
     return data === 'lock'
       ? onUpdateParam({ data, val: !param.lock })
