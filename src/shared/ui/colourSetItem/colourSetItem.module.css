@@ -1,0 +1,29 @@
+.listItem {
+  width: 90px;
+  height: 50px;
+  border: 0.1px solid var(--text);
+}
+.listItem:hover {
+  cursor: pointer;
+  filter: brightness(0.5);
+}
+.listItem:not(.set :last-child) {
+  margin-right: 10px;
+}
+@media (max-width: 871px) {
+  .listItem {
+    margin-bottom: 10px;
+  }
+}
+.icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  opacity: 0;
+  transition: 0.2s ease-in opacity;
+}
+.visible {
+  opacity: 1;
+  transition: 0.2s ease-in opacity;
+}
