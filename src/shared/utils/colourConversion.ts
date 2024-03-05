@@ -73,6 +73,7 @@ export const HexToHSL = (colour: string) => {
   const s = delta / (1 - Math.abs(2 * l - 1));
   return [Math.floor(h), updParam(s), updParam(l)];
 };
+
 export const decimalToHex = (value: number) => {
   if (value >= 255) return 'FF';
   if (value === 0) return '00';
@@ -89,8 +90,83 @@ export const decimalToHex = (value: number) => {
   if (result.length === 1) result = '0' + result;
   return result;
 };
+
 export const rgbToHex = (colour: string) =>
+  '#' +
   colour
     .split(',')
     .map((el) => decimalToHex(Number(el)))
     .join('');
+
+export const getLuminosity = (colour: string) => {
+  const [r, g, b] = hexToRGB(colour);
+  return (0.299 * r + 0.587 * g + 0.114 * b) / 255;
+};
+
+export const HSLGeneration = (colour: string) => {
+  const luminosuty = getLuminosity(colour);
+  const hue = Math.floor(Math.random() * 360);
+  let saturation = 0,
+    lightness = 0;
+  if (luminosuty > 0.5) {
+    saturation = Math.floor(Math.random() * 100);
+    lightness = Math.floor(Math.random() * (12 - 0) + 0);
+  } else {
+    saturation = Math.floor(Math.random() * (100 - 75) + 75);
+    lightness = Math.floor(Math.random() * (100 - 85) + 85);
+  }
+  return [hue, saturation, lightness];
+};
+
+export const hueToRgb = (hue: number, c: number, x: number, m: number) => {
+  let red = 0,
+    green = 0,
+    blue = 0;
+  //depends on Hue we get a special param of each channel
+  if (hue >= 0 && hue < 60) {
+    red = c;
+    green = x;
+  } else if (hue >= 60 && hue < 120) {
+    red = x;
+    green = c;
+  } else if (hue >= 120 && hue < 180) {
+    green = c;
+    blue = x;
+  } else if (hue >= 180 && hue < 240) {
+    green = x;
+    blue = c;
+  } else if (hue >= 240 && hue < 300) {
+    red = x;
+    blue = c;
+  } else {
+    red = c;
+    blue = x;
+  }
+  red = Math.floor((red + m) * 255);
+  green = Math.floor((green + m) * 255);
+  blue = Math.floor((blue + m) * 255);
+  return [red, green, blue];
+};
+export const hslToRgb = (colour: number[]) => {
+  const [h, s, l] = colour;
+  //method that convert an HSL color  to an RGB one
+  //https://www.baeldung.com/cs/convert-color-hsl-rgb
+  //Hue is a colour circle that contains a number between 0 and 360
+  //S- saturation, L- lightness. Both is a number between 0 and 1
+  //convert Lightness and saturation to correct value
+  const lightn = l / 100;
+  const satur = s / 100;
+  //get the chroma: Chroma= (1-|2*L-1|)*S
+  const chroma = (1 - Math.abs(2 * lightn - 1)) * satur;
+  //H`=H/60 degr
+  const hue = h / 60;
+  //X=chroma*(1-|H` mod 2-1|)
+  const X = chroma * (1 - Math.abs((hue % 2) - 1));
+  //m=L-chroma/2
+  const m = lightn - chroma / 2;
+
+  return hueToRgb(h, chroma, X, m);
+};
+export const hslToHex = (colour: number[]) => {
+  return rgbToHex(hslToRgb(colour).toString());
+};
