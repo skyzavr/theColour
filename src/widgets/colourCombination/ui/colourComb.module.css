@@ -1,0 +1,14 @@
+.wrapper {
+  margin-top: 50px;
+}
+.title {
+  text-align: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+.list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(90px, max-content));
+  gap: 20px;
+}
