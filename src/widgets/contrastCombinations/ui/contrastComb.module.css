@@ -1,0 +1,24 @@
+.wrapper {
+  margin-top: 50px;
+}
+.title {
+  font-size: 20px;
+  color: #fff;
+  text-align: left;
+  margin-bottom: 20px;
+}
+.list {
+  display: grid;
+  gap: 20px;
+}
+
+@media (min-width: 300px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(278px, max-content));
+  }
+}
+@media (min-width: 345px) {
+  .list {
+    grid-template-columns: repeat(auto-fill, minmax(290px, max-content));
+  }
+}
