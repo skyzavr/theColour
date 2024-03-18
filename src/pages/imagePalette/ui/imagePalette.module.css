@@ -1,0 +1,6 @@
+.wrapper {
+  max-width: 1440px;
+  margin: 0 auto;
+  color: var(--text);
+  font-size: 20px;
+}
