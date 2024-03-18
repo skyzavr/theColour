@@ -170,3 +170,19 @@ export const hslToRgb = (colour: number[]) => {
 export const hslToHex = (colour: number[]) => {
   return rgbToHex(hslToRgb(colour).toString());
 };
+
+export const rgbToHsl = (colour: number[]) => {
+  let [r, g, b] = colour;
+  r /= 255;
+  g /= 255;
+  b /= 255;
+  const Cmax = Math.max(r, g, b);
+  const Cmin = Math.min(r, g, b);
+  const delta = Cmax - Cmin;
+  let l = (Cmax + Cmin) / 2;
+  const h = Math.floor(calculateHue(delta, [r, g, b]));
+  const sDel = (delta / (1 - Math.abs(2 * l - 1))) * 100;
+  const s = delta === 0 ? Number(sDel.toFixed(0)) : 0;
+  l = Number((l * 100).toFixed(0));
+  return [h, s, l];
+};

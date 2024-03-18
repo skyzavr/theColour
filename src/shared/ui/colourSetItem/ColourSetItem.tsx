@@ -9,7 +9,7 @@ import { CalcContrastRatio } from '@shared/utils/calculateContrastRatio';
 import classes from './colourSetItem.module.css';
 
 const ColourSetItem = ({ colour }: { colour: string }) => {
-  const copy = useCopyClipboard('#' + rgbToHex(colour));
+  const copy = useCopyClipboard(rgbToHex(colour));
   const ratio = CalcContrastRatio();
   const [light, dark] = ['#F5F5F5', '#131313'];
   const [visible, setVisible] = useState<boolean>(false);

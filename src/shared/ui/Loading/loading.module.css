@@ -1,0 +1,23 @@
+.loader {
+  width: 50px;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  border: 5px solid;
+  border-color: var(--text) var(--bgr);
+  animation: loader 1.5s infinite;
+}
+@keyframes loader {
+  to {
+    transform: rotate(0.5turn);
+  }
+}
+.title {
+  color: var(--text);
+  margin-top: 20px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
