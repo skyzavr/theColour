@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-import { Card } from '@shared/model/Card';
+import { Card } from '@shared/types/Card';
 
 import classes from './cardPage.module.css';
 
