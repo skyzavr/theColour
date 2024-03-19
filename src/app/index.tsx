@@ -9,6 +9,7 @@ import { Contrast } from '@pages/contrastChecker';
 import { Palette } from '@pages/paletteGenerator';
 import { ImagePalette } from '@pages/imagePalette';
 import { ColourSetsPage } from '@pages/ColourSetsPage';
+import { Converter } from '@pages/converter';
 
 const App = () => {
   const initTheme = localStorage.getItem('theme') || 'dark';
@@ -20,6 +21,7 @@ const App = () => {
         { path: '/contrast', element: <Contrast /> },
         { path: '/generator', element: <Palette /> },
         { path: '/palette', element: <ImagePalette /> },
+        { path: '/converter', element: <Converter /> },
         { path: '/ColourInfo', element: <ColourSetsPage /> },
         {
           path: '*',
