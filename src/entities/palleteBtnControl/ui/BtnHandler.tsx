@@ -37,7 +37,12 @@ export const BtnHandler = (props: props) => {
     width: '300px',
     height: '350px',
   };
-  const modalHandler = () => setIsAddCard((prev) => !prev);
+  const modalHandler = () => {
+    !isAddCard
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible');
+    setIsAddCard((prev) => !prev);
+  };
   const onSetColour = (data: string) => setNewColour(data);
   const generateColours = () => {
     const list = [...cardList];

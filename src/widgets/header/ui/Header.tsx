@@ -11,7 +11,12 @@ export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const widthSize = useWidth(resizeScreen);
 
-  const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const toggleMenu = () => {
+    !isMenuOpen
+      ? (document.body.style.overflow = 'hidden')
+      : (document.body.style.overflow = 'visible');
+    setIsMenuOpen((prev) => !prev);
+  };
 
   function resizeScreen() {
     setIsMenuOpen((prev) => (window.innerWidth >= 1480 ? false : prev));
