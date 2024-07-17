@@ -14,7 +14,7 @@ type Error = {
   text: string;
   isError: boolean;
 };
-export const ColourField = ({ initColour, onSetColour, title }: props) => {
+export const ColourField = ({ initColour, onSetColour, title = '' }: props) => {
   const [colour, setColour] = useState<string>(initColour);
   const [error, setError] = useState<Error>({ text: '', isError: false });
 
