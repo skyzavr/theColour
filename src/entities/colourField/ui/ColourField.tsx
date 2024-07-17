@@ -8,7 +8,7 @@ import classes from './colourField.module.css';
 type props = {
   initColour: string;
   onSetColour: (data: string) => void;
-  title: string;
+  title?: string;
 };
 type Error = {
   text: string;
