@@ -11,7 +11,7 @@
   align-items: center;
 }
 .menuWrapper {
-  z-index: 1;
+  z-index: 1000;
   margin-right: 20px;
 }
 .controlEl {
