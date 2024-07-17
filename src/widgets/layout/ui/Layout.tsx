@@ -1,6 +1,7 @@
 import { Header } from '@widgets/header';
 import classes from './layout.module.css';
 import { Outlet } from 'react-router-dom';
+import { ScrollButton } from '@entities/scrollBtn';
 
 export const Layout = () => {
   return (
@@ -10,6 +11,7 @@ export const Layout = () => {
       <main>
         <Outlet />
       </main>
+      <ScrollButton />
     </>
   );
 };
