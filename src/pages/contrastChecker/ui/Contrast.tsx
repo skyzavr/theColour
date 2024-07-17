@@ -39,8 +39,16 @@ export const Contrast = () => {
       </div>
       <div className={classes.contrast}>
         <div className={classes.colourInputField}>
-          <ColourField initColour={colour} onSetColour={newColourHandler} />
-          <ColourField initColour={bgr} onSetColour={newBgrHandler} />
+          <ColourField
+            initColour={colour}
+            onSetColour={newColourHandler}
+            title="Text colour"
+          />
+          <ColourField
+            initColour={bgr}
+            onSetColour={newBgrHandler}
+            title="Background colour"
+          />
         </div>
         <TextField onSetText={setTextArea} quote={text} />
         <ContrastCard {...colourParams} />

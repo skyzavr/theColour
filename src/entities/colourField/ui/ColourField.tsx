@@ -8,12 +8,13 @@ import classes from './colourField.module.css';
 type props = {
   initColour: string;
   onSetColour: (data: string) => void;
+  title: string;
 };
 type Error = {
   text: string;
   isError: boolean;
 };
-export const ColourField = ({ initColour, onSetColour }: props) => {
+export const ColourField = ({ initColour, onSetColour, title }: props) => {
   const [colour, setColour] = useState<string>(initColour);
   const [error, setError] = useState<Error>({ text: '', isError: false });
 
@@ -32,6 +33,7 @@ export const ColourField = ({ initColour, onSetColour }: props) => {
 
   return (
     <div className={classes.wrapper}>
+      <div className={classes.fieldTitle}>{title}</div>
       <div className={classes.inputColourArea}>
         <ColourFieldInput {...params} />
         <ColourPicker {...params} />
