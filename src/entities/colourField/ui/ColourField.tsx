@@ -20,7 +20,7 @@ export const ColourField = ({ initColour, onSetColour, title = '' }: props) => {
 
   const onUpdateColour = (data: string) => {
     setColour(data);
-    onSetColour(data);
+    onSetColour(colour);
   };
   const onUpdateError = ({ text, isError }: Error) =>
     setError({ text, isError });
